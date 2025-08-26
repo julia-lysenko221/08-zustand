@@ -20,11 +20,10 @@ export interface FetchNotesResponse {
 }
 
 interface NotesClientProps {
-  initialData: FetchNotesResponse;
   tag: string | undefined;
 }
 
-export default function NotesClient({ initialData, tag }: NotesClientProps) {
+export default function NotesClient({ tag }: NotesClientProps) {
   const [search, setSearch] = useState('');
   const [page, setPage] = useState(1);
 
@@ -40,7 +39,6 @@ export default function NotesClient({ initialData, tag }: NotesClientProps) {
     queryFn: () => fetchNotes(page, perPage, debouncedSearch, tag),
 
     placeholderData: keepPreviousData,
-    initialData,
   });
 
   useEffect(() => {
