@@ -1,5 +1,26 @@
-import Link from 'next/link';
+// import Link from 'next/link';
 import css from '@/app/page.module.css';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Page not found',
+  description: 'This page cannot be found on NoteHub',
+
+  openGraph: {
+    title: `Page not found`,
+    description: 'NThis page cannot be found on NoteHub',
+    url: 'http://localhost:3000/not-found',
+
+    images: [
+      {
+        url: 'https://ac.goit.global/fullstack/react/notehub-og-meta.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'NoteHub',
+      },
+    ],
+  },
+};
 
 const NotFound = () => {
   return (
