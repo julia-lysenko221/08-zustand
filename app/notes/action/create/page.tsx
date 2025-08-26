@@ -1,4 +1,4 @@
-import css from './create/CreateNote.module.css';
+import css from './CreateNote.module.css';
 import NoteForm from '@/components/NoteForm/NoteForm';
 import type { Metadata } from 'next';
 
