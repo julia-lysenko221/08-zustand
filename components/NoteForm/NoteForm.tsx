@@ -20,7 +20,7 @@ export default function NoteForm() {
     onSuccess: () => {
       clearDraft();
       queryClient.invalidateQueries({ queryKey: ['notes'] });
-      router.push('/notes');
+      router.back();
     },
   });
 
